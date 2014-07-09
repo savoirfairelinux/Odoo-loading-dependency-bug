@@ -15,21 +15,28 @@ initialized in the wrong order.
 
 This repo has 4 modules:
 
-### **parent_module**: topmost module, dependency list lists **b_module** and 
-**a_module** in that order
+### **parent_module**
 
-### **b_module**: has a unittest which tests the module in **parent_module** 
-and with whatever modifications to the model are made in **grandchild_module**.
+Topmost module, dependency list lists **b_module** and **a_module** in that order
+
+### **b_module** 
+
+Has a unittest which tests the module in **parent_module** and with whatever 
+modifications to the model are made in **grandchild_module**.
 This model only depends on **grandchild_module** and is meant to be functional 
 on its own, independently from **a_module**, but can work with it installed.
 The unittest, however do not take into account **a_module** as it is not a 
 dependency.
 
-### **a_module**: add a required field to the model in **grandchild_module**.
+### **a_module**:
+
+Add a required field to the model in **grandchild_module**.
 Lists only **grandchild_module** as its dependencies and is meant to be 
 functional on its own, independently from **b_module**, but can work with it.
 
-### **grandchild_module**: Defines an example module. Has no dependencies.
+### **grandchild_module** 
+
+Defines an example module. Has no dependencies.
 
 ## How to reproduce
 
