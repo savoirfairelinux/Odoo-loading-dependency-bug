@@ -43,7 +43,7 @@ Defines an example module. Has no dependencies.
 Install **parent_module** with tests enabled using
 
 ```bash
-odoo.py -d test -i parent_module --test-enable --log-level=test
+openerp-server -d test -i parent_module --test-enable --log-level=test
 ```
 
 ## Expected behaviour
